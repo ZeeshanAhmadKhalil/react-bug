@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -11,12 +15,44 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    "isolatedModules": false,
     "jsx": "preserve",
     "baseUrl": "./",
-    "paths": {}
+    "paths": {
+      "@Assets/*": [
+        "App/Assets/*",
+      ],
+      "@Config/*": [
+        "App/Config/*",
+      ],
+      "@Hooks/*": [
+        "App/Hooks/*",
+      ],
+      "@Components/*": [
+        "App/Screens/Shared/Components/*",
+      ],
+      "@Layouts/*": [
+        "App/Screens/Layouts/*",
+      ],
+      "@Screens/*": [
+        "App/Screens/*",
+      ],
+      "@Store/*": [
+        "App/Store/*",
+      ],
+      "@Styles/*": [
+        "App/Styles/*",
+      ],
+    }
   },
   "include": [
-    "next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
